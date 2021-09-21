@@ -125,23 +125,10 @@ namespace ADCollector
 
         public void Run()
         {
-            if (username != null)
-            {
-                Utilities.RunAs(domainName, username, _password, () =>
-                {
-                    Connect();
-                    if (aclScan){  var dacl = Utilities.InvokeACLScan(identity); PrintACLs(dacl); }
-                    else if (adcs) { var adcs = Utilities.GetADCS(); PrintADCS(adcs); var certTemplateList = Utilities.GetInterestingCertTemplates(adcs); PrintCertTemplates(certTemplateList); }
-                    else { RunAllCommands(); }
-                });
-            }
-            else
-            {
-                Connect();
-                if (aclScan) { var dacl = Utilities.InvokeACLScan(identity); PrintACLs(dacl); }
-                else if (adcs) { var adcs = Utilities.GetADCS(); PrintADCS(adcs); var certTemplateList = Utilities.GetInterestingCertTemplates(adcs); PrintCertTemplates(certTemplateList); }
-                else { RunAllCommands(); }
-            }
+            Connect();
+            if (aclScan) { var dacl = Utilities.InvokeACLScan(identity); PrintACLs(dacl); }
+            else if (adcs) { var adcs = Utilities.GetADCS(); PrintADCS(adcs); var certTemplateList = Utilities.GetInterestingCertTemplates(adcs); PrintCertTemplates(certTemplateList); }
+            else { RunAllCommands(); }
         }
 
 
