@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ADCollector</RootNamespace>
     <AssemblyName>ADCollector</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
