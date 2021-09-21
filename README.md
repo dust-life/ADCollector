@@ -1,3 +1,4 @@
+#### 删掉了runas，适合.net4.0编译使用
 # ADCollector
 ADCollector is a lightweight tool that enumerates the Active Directory environment to identify possible attack vectors. It will give you a basic understanding of the configuration/deployment of the environment as a starting point. 
 
