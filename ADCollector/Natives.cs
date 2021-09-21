@@ -82,14 +82,6 @@ namespace ADCollector
             IntPtr resume_handle);
 
 
-        [DllImport("ADVAPI32.DLL", SetLastError = true, CharSet = CharSet.Unicode)]
-        internal static extern bool LogonUser(
-        string lpszUsername,
-        string lpszDomain,
-        string lpszPassword,
-        int dwLogonType,
-        int dwLogonProvider,
-        out SafeAccessTokenHandle phToken);
 
 
 
